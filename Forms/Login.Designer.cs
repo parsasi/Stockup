@@ -32,7 +32,7 @@
             this.usernameTexbox = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passwordTextbox = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.loginButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,36 +84,38 @@
             this.passwordTextbox.TabIndex = 2;
             this.passwordTextbox.Text = "";
             // 
-            // materialButton1
+            // loginButton
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.materialButton1.Depth = 0;
-            this.materialButton1.DrawShadows = true;
-            this.materialButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(570, 555);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.Size = new System.Drawing.Size(300, 38);
-            this.materialButton1.TabIndex = 3;
-            this.materialButton1.Text = "Login";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
+            this.loginButton.AutoSize = false;
+            this.loginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.loginButton.Depth = 0;
+            this.loginButton.DrawShadows = true;
+            this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.loginButton.HighEmphasis = true;
+            this.loginButton.Icon = null;
+            this.loginButton.Location = new System.Drawing.Point(570, 555);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.loginButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(300, 38);
+            this.loginButton.TabIndex = 3;
+            this.loginButton.Text = "Login";
+            this.loginButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.loginButton.UseAccentColor = false;
+            this.loginButton.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 1000);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.usernameTexbox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -129,6 +131,6 @@
         private MaterialSkin.Controls.MaterialTextBox usernameTexbox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialTextBox passwordTextbox;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton loginButton;
     }
 }
