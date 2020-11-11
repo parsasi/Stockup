@@ -90,6 +90,7 @@
             this.loginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.loginButton.Depth = 0;
+            this.loginButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.loginButton.DrawShadows = true;
             this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.loginButton.HighEmphasis = true;
@@ -104,6 +105,7 @@
             this.loginButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.loginButton.UseAccentColor = false;
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // Login
             // 
@@ -120,7 +122,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to StockUp";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
