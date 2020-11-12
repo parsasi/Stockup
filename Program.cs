@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockUp.Forms;
 
 namespace StockUp
 {
@@ -16,7 +17,10 @@ namespace StockUp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            var loginForm = new Login();
+            FormNavigator.currentForm = loginForm;
+            FormNavigator.forms = new List<StockUpForm> { loginForm, new InvoiceDashboardForm(), new DashboardForm() };
+            Application.Run(loginForm);
         }
     }
 }

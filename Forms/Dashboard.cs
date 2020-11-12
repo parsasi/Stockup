@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace StockUp.Forms
 {
-    public partial class Login : StockUpForm
+    public partial class DashboardForm : StockUpForm
     {
-        public Login() : base()
+        public DashboardForm()
         {
             InitializeComponent();
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e)
         {
-            FormNavigator.SwitchForm("DashboardForm");
+            FormNavigator.SwitchForm("InvoiceDashboardForm");
+
         }
     }
 }
