@@ -22,5 +22,10 @@ namespace StockUp.Forms
             FormNavigator.SwitchForm("InvoiceDashboardForm");
 
         }
+
+        private void productDashboardButton_Click(object sender, EventArgs e)
+        {
+            FormNavigator.SwitchForm("ProductDashboardForm");
+        }
     }
 }
