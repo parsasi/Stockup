@@ -17,9 +17,19 @@ namespace StockUp.Forms
             InitializeComponent();
         }
 
-        private void InvoiceDashboard_Load(object sender, EventArgs e)
+        private void DeleteInvoiceButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SaveInvoiceButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboardInvoiceButton_Click(object sender, EventArgs e)
+        {
+            FormNavigator.SwitchForm("DashboardForm");
         }
     }
 }
