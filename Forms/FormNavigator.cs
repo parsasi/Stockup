@@ -16,11 +16,31 @@ namespace StockUp.Forms
 
         public static void SwitchForm(string formName)
         {
-            FormNavigator.currentForm.Hide();
-            var formToShow = FormNavigator.forms.Find(item => item.Name == formName);
-            formToShow.Show();
+            CloseForm(FormNavigator.currentForm);
+            var formToShow = FormNavigator.OpenForm(formName);
             FormNavigator.currentForm = formToShow;
         }
 
+        public static StockUpForm OpenForm(string formName)
+        {
+            var formToShow = FormNavigator.FindForm(formName);
+            formToShow.Show();
+            return formToShow;
+        }
+
+        public static void CloseForm(string formName)
+        {
+            var formToHide = FormNavigator.FindForm(formName);
+            formToHide.Hide();
+        }
+        public static void CloseForm(StockUpForm form)
+        {
+            form.Hide();
+        }
+
+        public static StockUpForm FindForm(string formName)
+        {
+            return FormNavigator.forms.Find(item => item.Name == formName);
+        }
     }
 }

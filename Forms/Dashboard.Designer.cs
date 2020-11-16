@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.openInvoicesDashboardButton = new MaterialSkin.Controls.MaterialButton();
+            this.productDashboardButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.productDashboardButton);
             this.panel1.Controls.Add(this.openInvoicesDashboardButton);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -83,6 +85,28 @@
             this.openInvoicesDashboardButton.UseVisualStyleBackColor = false;
             this.openInvoicesDashboardButton.Click += new System.EventHandler(this.materialButton1_Click);
             // 
+            // productDashboardButton
+            // 
+            this.productDashboardButton.AutoSize = false;
+            this.productDashboardButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.productDashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.productDashboardButton.Depth = 0;
+            this.productDashboardButton.DrawShadows = true;
+            this.productDashboardButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.productDashboardButton.HighEmphasis = true;
+            this.productDashboardButton.Icon = null;
+            this.productDashboardButton.Location = new System.Drawing.Point(14, 306);
+            this.productDashboardButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.productDashboardButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.productDashboardButton.Name = "productDashboardButton";
+            this.productDashboardButton.Size = new System.Drawing.Size(282, 59);
+            this.productDashboardButton.TabIndex = 2;
+            this.productDashboardButton.Text = "Product Dashboard";
+            this.productDashboardButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.productDashboardButton.UseAccentColor = false;
+            this.productDashboardButton.UseVisualStyleBackColor = false;
+            this.productDashboardButton.Click += new System.EventHandler(this.productDashboardButton_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -102,5 +126,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialButton openInvoicesDashboardButton;
+        private MaterialSkin.Controls.MaterialButton productDashboardButton;
     }
 }
