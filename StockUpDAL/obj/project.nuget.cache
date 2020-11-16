@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xYwN/87V2duQeyd/yWZXZQY1V7CH82BORwfDt+qUquz5hCk+G1wmhRKAUyOGou9X8c7xBLkrMKfYFP4gT4WI0g==",
+  "dgSpecHash": "G9ePwQRStVR3Y6z5OqwjPj5zc7YZKniu5uaUF50cEsUri46ooXwHeavdt4gZqeDfUTVYjoMsbboytCjb2P+4ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\Stockup\\StockUpDAL\\StockUpDAL.csproj",
+  "projectFilePath": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\stockup\\StockUpDAL\\StockUpDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\parsa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\parsa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

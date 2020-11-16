@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\Stockup\\StockUpBL\\StockUpBL.csproj": {}
+    "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\stockup\\StockUpBL\\StockUpBL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\Stockup\\StockUpBL\\StockUpBL.csproj": {
+    "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\stockup\\StockUpBL\\StockUpBL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\Stockup\\StockUpBL\\StockUpBL.csproj",
+        "projectUniqueName": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\stockup\\StockUpBL\\StockUpBL.csproj",
         "projectName": "StockUpBL",
-        "projectPath": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\Stockup\\StockUpBL\\StockUpBL.csproj",
+        "projectPath": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\stockup\\StockUpBL\\StockUpBL.csproj",
         "packagesPath": "C:\\Users\\parsa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\Stockup\\StockUpBL\\obj\\",
+        "outputPath": "C:\\Users\\parsa\\OneDrive\\Documents\\C#Class\\final\\stockup\\StockUpBL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\parsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
