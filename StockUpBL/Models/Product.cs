@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
 
 namespace StockUpBL.Models
 {
