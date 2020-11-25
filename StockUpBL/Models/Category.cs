@@ -6,7 +6,7 @@ using StockUpBL;
 
 namespace StockUpBL.Models
 {
-    class Category 
+    public class Category 
     {
         public int Id { get; set; }
         [Required]
