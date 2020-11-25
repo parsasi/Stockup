@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StockUpBL.Models
 {
-    class Customer
+    public class Customer
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

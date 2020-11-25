@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StockUpBL.Models
 {
-    class Invoice
+    public class Invoice
     {
         public int Id { get; set; }
         public DateTime Time { get; set; }
