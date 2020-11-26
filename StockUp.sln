@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockUpApp", "StockUpApp\StockUpApp.csproj", "{9EF26718-EF6C-4E90-A412-B72AC934FC6C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1A89DF09-05B9-4073-ADAE-25D9D1632288} = {1A89DF09-05B9-4073-ADAE-25D9D1632288}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockUpDAL", "StockUpDAL\StockUpDAL.csproj", "{1A89DF09-05B9-4073-ADAE-25D9D1632288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockUpDAL", "StockUpDAL\StockUpDAL.csproj", "{1A89DF09-05B9-4073-ADAE-25D9D1632288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockUpBL", "StockUpBL\StockUpBL.csproj", "{6E9AA46E-79BA-4991-BE6A-397D9B6EE51A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockUpBL", "StockUpBL\StockUpBL.csproj", "{6E9AA46E-79BA-4991-BE6A-397D9B6EE51A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
