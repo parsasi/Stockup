@@ -19,7 +19,16 @@ namespace StockUp
             Application.SetCompatibleTextRenderingDefault(false);
             var loginForm = new Login();
             FormNavigator.currentForm = loginForm;
-            FormNavigator.forms = new List<StockUpForm> { loginForm, new InvoiceDashboardForm(), new DashboardForm() , new ProductDashboardForm() , new addProductForm() };
+            FormNavigator.forms = new List<StockUpForm>
+            {
+                loginForm,
+                new InvoiceDashboardForm(),
+                new DashboardForm(),
+                new ProductDashboardForm(),
+                new addProductForm(),
+                new CategoryDashboardForm(),
+                new CustomerDashboardForm()
+            };
             Application.Run(loginForm);
         }
     }
