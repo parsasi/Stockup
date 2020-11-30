@@ -35,7 +35,7 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.filterButton = new MaterialSkin.Controls.MaterialButton();
             this.productSearchTextbox = new MaterialSkin.Controls.MaterialTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productsDGV = new System.Windows.Forms.DataGridView();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.productTab = new MaterialSkin.Controls.MaterialTabControl();
@@ -64,7 +64,7 @@
             this.addFormButton = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.materialCard1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).BeginInit();
             this.materialCard2.SuspendLayout();
             this.productTab.SuspendLayout();
             this.detailsTab.SuspendLayout();
@@ -80,7 +80,7 @@
             this.tableLayoutPanel1.Controls.Add(this.productBrowseLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dashboardButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.materialCard1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.productsDGV, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.addFormButton, 1, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -188,17 +188,18 @@
             this.productSearchTextbox.TabIndex = 0;
             this.productSearchTextbox.Text = "";
             // 
-            // dataGridView1
+            // productsDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dataGridView1.Location = new System.Drawing.Point(3, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 740);
-            this.dataGridView1.TabIndex = 3;
+            this.productsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productsDGV.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.productsDGV.Location = new System.Drawing.Point(3, 174);
+            this.productsDGV.Name = "productsDGV";
+            this.productsDGV.RowHeadersWidth = 51;
+            this.productsDGV.RowTemplate.Height = 24;
+            this.productsDGV.Size = new System.Drawing.Size(843, 740);
+            this.productsDGV.TabIndex = 3;
+            this.productsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // materialCard2
             // 
@@ -645,7 +646,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.materialCard1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).EndInit();
             this.materialCard2.ResumeLayout(false);
             this.productTab.ResumeLayout(false);
             this.detailsTab.ResumeLayout(false);
@@ -663,7 +664,7 @@
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialButton filterButton;
         private MaterialSkin.Controls.MaterialTextBox productSearchTextbox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productsDGV;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private MaterialSkin.Controls.MaterialTabControl productTab;

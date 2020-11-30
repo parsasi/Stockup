@@ -16,7 +16,7 @@ namespace StockUpDAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\parsa\OneDrive\Documents\StockUpDB.mdf;Integrated Security=True;Connect Timeout=30";
+            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\PARSA\DOCUMENTS\STOCKUP\STOCKUP\STOCKUPDAL\STOCKUPDB.MDF;Integrated Security=True;Connect Timeout=30";
             optionsBuilder.UseSqlServer(connectionString);
         }
 

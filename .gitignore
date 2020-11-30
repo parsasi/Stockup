@@ -226,3 +226,6 @@ project.lock.json
 
 .env*
 !.env*.template
+
+/StockUpDAL/StockUpDB.mdf
+/StockUpDAL/StockUpDB_log.ldf

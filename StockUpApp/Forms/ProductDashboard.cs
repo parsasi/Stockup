@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockUpBL.Models;
+using StockUpDAL;
 
 namespace StockUp.Forms
 {
@@ -19,7 +21,9 @@ namespace StockUp.Forms
 
         private void ProductDashboard_Load(object sender, EventArgs e)
         {
-
+            var dbContext = new AppDbContext();
+            var products = dbContext.Products.ToList();
+            productsDGV.DataSource = products;
         }
 
         private void dashboardButton_Click(object sender, EventArgs e)
@@ -35,6 +39,11 @@ namespace StockUp.Forms
         private void addFormButton_Click(object sender, EventArgs e)
         {
             FormNavigator.OpenForm("addProductForm");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
