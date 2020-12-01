@@ -15,7 +15,7 @@ namespace StockUpBL.Models
         public string Title { get; set; }
         [Required]
         public int Quantity { get; set; }
-        public int Description { get; set; }
+        public string Description { get; set; }
         [Required]
         public Category Category { get; set; }
         public DateTime LastRecieved { get; set; }

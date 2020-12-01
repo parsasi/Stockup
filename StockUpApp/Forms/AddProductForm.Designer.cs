@@ -33,7 +33,7 @@
             this.quantityEditPlusButton = new MaterialSkin.Controls.MaterialButton();
             this.descriptionTextbox = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.manufacturerTextbox = new MaterialSkin.Controls.MaterialTextBox();
-            this.quantityEditTextbox = new MaterialSkin.Controls.MaterialTextBox();
+            this.quantityAddTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.titleTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.saveProductButton = new MaterialSkin.Controls.MaterialButton();
             this.cancelButton = new MaterialSkin.Controls.MaterialButton();
@@ -60,6 +60,7 @@
             this.quantityEditSubButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.quantityEditSubButton.UseAccentColor = false;
             this.quantityEditSubButton.UseVisualStyleBackColor = false;
+            this.quantityEditSubButton.Click += new System.EventHandler(this.quantityEditSubButton_Click);
             // 
             // quantityEditPlusButton
             // 
@@ -81,6 +82,7 @@
             this.quantityEditPlusButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.quantityEditPlusButton.UseAccentColor = false;
             this.quantityEditPlusButton.UseVisualStyleBackColor = false;
+            this.quantityEditPlusButton.Click += new System.EventHandler(this.quantityEditPlusButton_Click);
             // 
             // descriptionTextbox
             // 
@@ -114,22 +116,22 @@
             this.manufacturerTextbox.TabIndex = 2;
             this.manufacturerTextbox.Text = "";
             // 
-            // quantityEditTextbox
+            // quantityAddTextbox
             // 
-            this.quantityEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.quantityEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.quantityEditTextbox.Depth = 0;
-            this.quantityEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
-            this.quantityEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.quantityEditTextbox.Hint = "Quantity...";
-            this.quantityEditTextbox.Location = new System.Drawing.Point(110, 231);
-            this.quantityEditTextbox.MaxLength = 50;
-            this.quantityEditTextbox.MouseState = MaterialSkin.MouseState.OUT;
-            this.quantityEditTextbox.Multiline = false;
-            this.quantityEditTextbox.Name = "quantityEditTextbox";
-            this.quantityEditTextbox.Size = new System.Drawing.Size(323, 50);
-            this.quantityEditTextbox.TabIndex = 1;
-            this.quantityEditTextbox.Text = "0";
+            this.quantityAddTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.quantityAddTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.quantityAddTextbox.Depth = 0;
+            this.quantityAddTextbox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.quantityAddTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.quantityAddTextbox.Hint = "Quantity...";
+            this.quantityAddTextbox.Location = new System.Drawing.Point(110, 231);
+            this.quantityAddTextbox.MaxLength = 50;
+            this.quantityAddTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.quantityAddTextbox.Multiline = false;
+            this.quantityAddTextbox.Name = "quantityAddTextbox";
+            this.quantityAddTextbox.Size = new System.Drawing.Size(323, 50);
+            this.quantityAddTextbox.TabIndex = 1;
+            this.quantityAddTextbox.Text = "0";
             // 
             // titleTextbox
             // 
@@ -168,6 +170,7 @@
             this.saveProductButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.saveProductButton.UseAccentColor = false;
             this.saveProductButton.UseVisualStyleBackColor = false;
+            this.saveProductButton.Click += new System.EventHandler(this.saveProductButton_Click);
             // 
             // cancelButton
             // 
@@ -216,7 +219,7 @@
             this.Controls.Add(this.quantityEditSubButton);
             this.Controls.Add(this.descriptionTextbox);
             this.Controls.Add(this.quantityEditPlusButton);
-            this.Controls.Add(this.quantityEditTextbox);
+            this.Controls.Add(this.quantityAddTextbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -232,7 +235,7 @@
         private MaterialSkin.Controls.MaterialButton quantityEditPlusButton;
         private MaterialSkin.Controls.MaterialMultiLineTextBox descriptionTextbox;
         private MaterialSkin.Controls.MaterialTextBox manufacturerTextbox;
-        private MaterialSkin.Controls.MaterialTextBox quantityEditTextbox;
+        private MaterialSkin.Controls.MaterialTextBox quantityAddTextbox;
         private MaterialSkin.Controls.MaterialTextBox titleTextbox;
         private MaterialSkin.Controls.MaterialButton saveProductButton;
         private MaterialSkin.Controls.MaterialButton cancelButton;

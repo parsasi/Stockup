@@ -17,12 +17,12 @@ namespace StockUp.Forms
         public ProductDashboardForm()
         {
             InitializeComponent();
+            this.InitDB();
         }
 
         private void ProductDashboard_Load(object sender, EventArgs e)
         {
-            var dbContext = new AppDbContext();
-            var products = dbContext.Products.ToList();
+            var products = this.DbContext.Products.ToList();
             productsDGV.DataSource = products;
         }
 
