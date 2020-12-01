@@ -59,7 +59,7 @@
             this.categoryEditListBox = new System.Windows.Forms.ListBox();
             this.quantityEditSubButton = new MaterialSkin.Controls.MaterialButton();
             this.quantityEditPlusButton = new MaterialSkin.Controls.MaterialButton();
-            this.materialMultiLineTextBox1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.descriptionEditTextbox = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.manufacturerEditTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.quantityEditTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.titleEditTextbox = new MaterialSkin.Controls.MaterialTextBox();
@@ -96,7 +96,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1416, 917);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // productBrowseLabel
             // 
@@ -284,7 +283,7 @@
             this.categoryLabel.Depth = 0;
             this.categoryLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.categoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.categoryLabel.Location = new System.Drawing.Point(100, 197);
+            this.categoryLabel.Location = new System.Drawing.Point(258, 197);
             this.categoryLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(1, 0);
@@ -311,7 +310,7 @@
             this.lastRecievedLabel.Depth = 0;
             this.lastRecievedLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lastRecievedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lastRecievedLabel.Location = new System.Drawing.Point(142, 150);
+            this.lastRecievedLabel.Location = new System.Drawing.Point(258, 150);
             this.lastRecievedLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.lastRecievedLabel.Name = "lastRecievedLabel";
             this.lastRecievedLabel.Size = new System.Drawing.Size(1, 0);
@@ -439,7 +438,7 @@
             this.editTab.Controls.Add(this.categoryEditListBox);
             this.editTab.Controls.Add(this.quantityEditSubButton);
             this.editTab.Controls.Add(this.quantityEditPlusButton);
-            this.editTab.Controls.Add(this.materialMultiLineTextBox1);
+            this.editTab.Controls.Add(this.descriptionEditTextbox);
             this.editTab.Controls.Add(this.manufacturerEditTextbox);
             this.editTab.Controls.Add(this.quantityEditTextbox);
             this.editTab.Controls.Add(this.titleEditTextbox);
@@ -546,22 +545,20 @@
             this.quantityEditPlusButton.UseAccentColor = false;
             this.quantityEditPlusButton.UseVisualStyleBackColor = false;
             // 
-            // materialMultiLineTextBox1
+            // descriptionEditTextbox
             // 
-            this.materialMultiLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.materialMultiLineTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialMultiLineTextBox1.Depth = 0;
-            this.materialMultiLineTextBox1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMultiLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialMultiLineTextBox1.Hint = "";
-            this.materialMultiLineTextBox1.Location = new System.Drawing.Point(18, 220);
-            this.materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            this.materialMultiLineTextBox1.Size = new System.Drawing.Size(458, 119);
-            this.materialMultiLineTextBox1.TabIndex = 4;
-            this.materialMultiLineTextBox1.Text = "The De\'Longhi Dedica Deluxe Pump Espresso machine in matte stainless steel finish" +
-    ", provides the high-quality brewing power you expect from De\'Longhi in an ultra " +
-    "slip 6in design.";
+            this.descriptionEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.descriptionEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionEditTextbox.Depth = 0;
+            this.descriptionEditTextbox.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.descriptionEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.descriptionEditTextbox.Hint = "";
+            this.descriptionEditTextbox.Location = new System.Drawing.Point(18, 220);
+            this.descriptionEditTextbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.descriptionEditTextbox.Name = "descriptionEditTextbox";
+            this.descriptionEditTextbox.Size = new System.Drawing.Size(458, 119);
+            this.descriptionEditTextbox.TabIndex = 4;
+            this.descriptionEditTextbox.Text = "";
             // 
             // manufacturerEditTextbox
             // 
@@ -578,7 +575,7 @@
             this.manufacturerEditTextbox.Name = "manufacturerEditTextbox";
             this.manufacturerEditTextbox.Size = new System.Drawing.Size(458, 50);
             this.manufacturerEditTextbox.TabIndex = 2;
-            this.manufacturerEditTextbox.Text = "Delonghi";
+            this.manufacturerEditTextbox.Text = "";
             // 
             // quantityEditTextbox
             // 
@@ -595,7 +592,7 @@
             this.quantityEditTextbox.Name = "quantityEditTextbox";
             this.quantityEditTextbox.Size = new System.Drawing.Size(323, 50);
             this.quantityEditTextbox.TabIndex = 1;
-            this.quantityEditTextbox.Text = "12";
+            this.quantityEditTextbox.Text = "0";
             // 
             // titleEditTextbox
             // 
@@ -612,7 +609,7 @@
             this.titleEditTextbox.Name = "titleEditTextbox";
             this.titleEditTextbox.Size = new System.Drawing.Size(458, 50);
             this.titleEditTextbox.TabIndex = 0;
-            this.titleEditTextbox.Text = "Barista Espresso Machine";
+            this.titleEditTextbox.Text = "";
             // 
             // addFormButton
             // 
@@ -687,7 +684,7 @@
         private MaterialSkin.Controls.MaterialLabel categoryTextLabel;
         private MaterialSkin.Controls.MaterialButton quantityEditSubButton;
         private MaterialSkin.Controls.MaterialButton quantityEditPlusButton;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox descriptionEditTextbox;
         private MaterialSkin.Controls.MaterialTextBox manufacturerEditTextbox;
         private MaterialSkin.Controls.MaterialTextBox quantityEditTextbox;
         private MaterialSkin.Controls.MaterialTextBox titleEditTextbox;

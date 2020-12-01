@@ -9,6 +9,7 @@ namespace StockUpApp.ViewModels
 {
     class ProductViewModel
     {
+        public string UPC { get; set; }
         public string Title { get; set; }
         public string Manufacturer { get; set; }
         public string Description { get; set; }
@@ -22,6 +23,7 @@ namespace StockUpApp.ViewModels
             this.Description = product.Description;
             this.Category = product.Category.Title;
             this.Quantity = product.Quantity;
+            this.UPC = product.UPC;
         }
     }
 }
