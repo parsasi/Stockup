@@ -26,8 +26,10 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDashboardForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.productBrowseLabel = new MaterialSkin.Controls.MaterialLabel();
@@ -45,7 +47,7 @@
             this.lastRecievedLabel = new MaterialSkin.Controls.MaterialLabel();
             this.lastRecievedTextLabel = new MaterialSkin.Controls.MaterialLabel();
             this.priceLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.descriptionTextbox = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.descriptionLabel = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.inStockLabel = new MaterialSkin.Controls.MaterialLabel();
             this.inStockTextLabel = new MaterialSkin.Controls.MaterialLabel();
             this.manufacturerLabel = new MaterialSkin.Controls.MaterialLabel();
@@ -191,6 +193,14 @@
             // productsDGV
             // 
             this.productsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.productsDGV.DefaultCellStyle = dataGridViewCellStyle1;
             this.productsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsDGV.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.productsDGV.GridColor = System.Drawing.Color.Maroon;
@@ -254,7 +264,7 @@
             this.detailsTab.Controls.Add(this.lastRecievedLabel);
             this.detailsTab.Controls.Add(this.lastRecievedTextLabel);
             this.detailsTab.Controls.Add(this.priceLabel);
-            this.detailsTab.Controls.Add(this.descriptionTextbox);
+            this.detailsTab.Controls.Add(this.descriptionLabel);
             this.detailsTab.Controls.Add(this.inStockLabel);
             this.detailsTab.Controls.Add(this.inStockTextLabel);
             this.detailsTab.Controls.Add(this.manufacturerLabel);
@@ -277,9 +287,8 @@
             this.categoryLabel.Location = new System.Drawing.Point(100, 197);
             this.categoryLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(54, 19);
+            this.categoryLabel.Size = new System.Drawing.Size(1, 0);
             this.categoryLabel.TabIndex = 11;
-            this.categoryLabel.Text = "Kitchen";
             // 
             // categoryTextLabel
             // 
@@ -305,9 +314,8 @@
             this.lastRecievedLabel.Location = new System.Drawing.Point(142, 150);
             this.lastRecievedLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.lastRecievedLabel.Name = "lastRecievedLabel";
-            this.lastRecievedLabel.Size = new System.Drawing.Size(152, 19);
+            this.lastRecievedLabel.Size = new System.Drawing.Size(1, 0);
             this.lastRecievedLabel.TabIndex = 8;
-            this.lastRecievedLabel.Text = "November 12th, 2020";
             // 
             // lastRecievedTextLabel
             // 
@@ -337,23 +345,21 @@
             this.priceLabel.TabIndex = 6;
             this.priceLabel.Text = "$ 229.95";
             // 
-            // descriptionTextbox
+            // descriptionLabel
             // 
-            this.descriptionTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.descriptionTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionTextbox.Depth = 0;
-            this.descriptionTextbox.Font = new System.Drawing.Font("Roboto", 10.8F);
-            this.descriptionTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.descriptionTextbox.Hint = "";
-            this.descriptionTextbox.Location = new System.Drawing.Point(21, 270);
-            this.descriptionTextbox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.descriptionTextbox.Name = "descriptionTextbox";
-            this.descriptionTextbox.ReadOnly = true;
-            this.descriptionTextbox.Size = new System.Drawing.Size(456, 96);
-            this.descriptionTextbox.TabIndex = 5;
-            this.descriptionTextbox.Text = "The De\'Longhi Dedica Deluxe Pump Espresso machine in matte stainless steel finish" +
-    ", provides the high-quality brewing power you expect from De\'Longhi in an ultra " +
-    "slip 6in design.";
+            this.descriptionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.descriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionLabel.Depth = 0;
+            this.descriptionLabel.Font = new System.Drawing.Font("Roboto", 10.8F);
+            this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.descriptionLabel.Hint = "";
+            this.descriptionLabel.Location = new System.Drawing.Point(21, 270);
+            this.descriptionLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.ReadOnly = true;
+            this.descriptionLabel.Size = new System.Drawing.Size(456, 96);
+            this.descriptionLabel.TabIndex = 5;
+            this.descriptionLabel.Text = "";
             // 
             // inStockLabel
             // 
@@ -365,9 +371,8 @@
             this.inStockLabel.Location = new System.Drawing.Point(100, 105);
             this.inStockLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.inStockLabel.Name = "inStockLabel";
-            this.inStockLabel.Size = new System.Drawing.Size(10, 19);
+            this.inStockLabel.Size = new System.Drawing.Size(1, 0);
             this.inStockLabel.TabIndex = 4;
-            this.inStockLabel.Text = "8";
             // 
             // inStockTextLabel
             // 
@@ -393,9 +398,9 @@
             this.manufacturerLabel.Location = new System.Drawing.Point(18, 63);
             this.manufacturerLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.manufacturerLabel.Name = "manufacturerLabel";
-            this.manufacturerLabel.Size = new System.Drawing.Size(64, 19);
+            this.manufacturerLabel.Size = new System.Drawing.Size(9, 19);
             this.manufacturerLabel.TabIndex = 2;
-            this.manufacturerLabel.Text = "Delonghi";
+            this.manufacturerLabel.Text = "  ";
             // 
             // upcLabel
             // 
@@ -408,9 +413,8 @@
             this.upcLabel.Location = new System.Drawing.Point(257, 61);
             this.upcLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.upcLabel.Name = "upcLabel";
-            this.upcLabel.Size = new System.Drawing.Size(109, 19);
+            this.upcLabel.Size = new System.Drawing.Size(1, 0);
             this.upcLabel.TabIndex = 1;
-            this.upcLabel.Text = "012345678905";
             this.upcLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // productNameLabel
@@ -424,9 +428,8 @@
             this.productNameLabel.Location = new System.Drawing.Point(16, 22);
             this.productNameLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.productNameLabel.Name = "productNameLabel";
-            this.productNameLabel.Size = new System.Drawing.Size(278, 29);
+            this.productNameLabel.Size = new System.Drawing.Size(1, 0);
             this.productNameLabel.TabIndex = 0;
-            this.productNameLabel.Text = "Barista Espresso Machine";
             // 
             // editTab
             // 
@@ -674,7 +677,7 @@
         private MaterialSkin.Controls.MaterialLabel manufacturerLabel;
         private MaterialSkin.Controls.MaterialLabel upcLabel;
         private MaterialSkin.Controls.MaterialLabel productNameLabel;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox descriptionTextbox;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox descriptionLabel;
         private MaterialSkin.Controls.MaterialLabel inStockLabel;
         private MaterialSkin.Controls.MaterialLabel inStockTextLabel;
         private MaterialSkin.Controls.MaterialLabel priceLabel;
