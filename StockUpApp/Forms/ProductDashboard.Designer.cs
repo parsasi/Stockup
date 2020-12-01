@@ -54,6 +54,7 @@
             this.upcLabel = new MaterialSkin.Controls.MaterialLabel();
             this.productNameLabel = new MaterialSkin.Controls.MaterialLabel();
             this.editTab = new System.Windows.Forms.TabPage();
+            this.priceEditTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.deleteProductButton = new MaterialSkin.Controls.MaterialButton();
             this.categoryEditListBox = new System.Windows.Forms.ListBox();
@@ -252,7 +253,7 @@
             this.productTab.Multiline = true;
             this.productTab.Name = "productTab";
             this.productTab.SelectedIndex = 0;
-            this.productTab.Size = new System.Drawing.Size(505, 532);
+            this.productTab.Size = new System.Drawing.Size(505, 539);
             this.productTab.TabIndex = 0;
             // 
             // detailsTab
@@ -272,7 +273,7 @@
             this.detailsTab.Location = new System.Drawing.Point(4, 26);
             this.detailsTab.Name = "detailsTab";
             this.detailsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.detailsTab.Size = new System.Drawing.Size(497, 502);
+            this.detailsTab.Size = new System.Drawing.Size(497, 509);
             this.detailsTab.TabIndex = 0;
             this.detailsTab.Text = "Details";
             // 
@@ -340,9 +341,8 @@
             this.priceLabel.Location = new System.Drawing.Point(258, 105);
             this.priceLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(63, 19);
+            this.priceLabel.Size = new System.Drawing.Size(1, 0);
             this.priceLabel.TabIndex = 6;
-            this.priceLabel.Text = "$ 229.95";
             // 
             // descriptionLabel
             // 
@@ -433,6 +433,7 @@
             // editTab
             // 
             this.editTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.editTab.Controls.Add(this.priceEditTextbox);
             this.editTab.Controls.Add(this.materialButton1);
             this.editTab.Controls.Add(this.deleteProductButton);
             this.editTab.Controls.Add(this.categoryEditListBox);
@@ -445,9 +446,26 @@
             this.editTab.Location = new System.Drawing.Point(4, 26);
             this.editTab.Name = "editTab";
             this.editTab.Padding = new System.Windows.Forms.Padding(3);
-            this.editTab.Size = new System.Drawing.Size(497, 502);
+            this.editTab.Size = new System.Drawing.Size(497, 509);
             this.editTab.TabIndex = 1;
             this.editTab.Text = "Edit";
+            // 
+            // priceEditTextbox
+            // 
+            this.priceEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.priceEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.priceEditTextbox.Depth = 0;
+            this.priceEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.priceEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.priceEditTextbox.Hint = "Price";
+            this.priceEditTextbox.Location = new System.Drawing.Point(18, 222);
+            this.priceEditTextbox.MaxLength = 50;
+            this.priceEditTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.priceEditTextbox.Multiline = false;
+            this.priceEditTextbox.Name = "priceEditTextbox";
+            this.priceEditTextbox.Size = new System.Drawing.Size(458, 50);
+            this.priceEditTextbox.TabIndex = 10;
+            this.priceEditTextbox.Text = "";
             // 
             // materialButton1
             // 
@@ -553,10 +571,10 @@
             this.descriptionEditTextbox.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.descriptionEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionEditTextbox.Hint = "";
-            this.descriptionEditTextbox.Location = new System.Drawing.Point(18, 220);
+            this.descriptionEditTextbox.Location = new System.Drawing.Point(18, 278);
             this.descriptionEditTextbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.descriptionEditTextbox.Name = "descriptionEditTextbox";
-            this.descriptionEditTextbox.Size = new System.Drawing.Size(458, 119);
+            this.descriptionEditTextbox.Size = new System.Drawing.Size(458, 72);
             this.descriptionEditTextbox.TabIndex = 4;
             this.descriptionEditTextbox.Text = "";
             // 
@@ -692,5 +710,6 @@
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton deleteProductButton;
         private MaterialSkin.Controls.MaterialButton addFormButton;
+        private MaterialSkin.Controls.MaterialTextBox priceEditTextbox;
     }
 }

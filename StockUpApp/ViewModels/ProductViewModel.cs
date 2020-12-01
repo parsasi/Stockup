@@ -16,6 +16,9 @@ namespace StockUpApp.ViewModels
         public string Category { get; set; }
         public int Quantity { get; set; }
 
+        public double Price { get; set; }
+
+
         public ProductViewModel(Product product) 
         {
             this.Title = product.Title;
@@ -24,6 +27,7 @@ namespace StockUpApp.ViewModels
             this.Category = product.Category.Title;
             this.Quantity = product.Quantity;
             this.UPC = product.UPC;
+            this.Price = product.Price;
         }
     }
 }
