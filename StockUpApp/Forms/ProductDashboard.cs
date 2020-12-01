@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockUpBL.Models;
 using StockUpDAL;
+using StockUpApp.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace StockUp.Forms
 {
@@ -22,7 +24,7 @@ namespace StockUp.Forms
 
         private void ProductDashboard_Load(object sender, EventArgs e)
         {
-            var products = this.DbContext.Products.ToList();
+            var products = this.ListProducts();
             productsDGV.DataSource = products;
         }
 
@@ -44,6 +46,13 @@ namespace StockUp.Forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private List<ProductViewModel> ListProducts()
+        {
+            var allProducts = this.DbContext.Products.Include("Category").ToList();
+            List<ProductViewModel> allProductsView = allProducts.Select(item => new ProductViewModel(item)).ToList();
+            return allProductsView;
         }
     }
 }

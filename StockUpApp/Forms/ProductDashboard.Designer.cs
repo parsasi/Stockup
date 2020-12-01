@@ -193,6 +193,7 @@
             this.productsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsDGV.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.productsDGV.GridColor = System.Drawing.Color.Maroon;
             this.productsDGV.Location = new System.Drawing.Point(3, 174);
             this.productsDGV.Name = "productsDGV";
             this.productsDGV.RowHeadersWidth = 51;
