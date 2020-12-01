@@ -352,11 +352,11 @@
             this.descriptionLabel.Font = new System.Drawing.Font("Roboto", 10.8F);
             this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionLabel.Hint = "";
-            this.descriptionLabel.Location = new System.Drawing.Point(21, 270);
+            this.descriptionLabel.Location = new System.Drawing.Point(21, 269);
             this.descriptionLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.ReadOnly = true;
-            this.descriptionLabel.Size = new System.Drawing.Size(456, 96);
+            this.descriptionLabel.Size = new System.Drawing.Size(456, 144);
             this.descriptionLabel.TabIndex = 5;
             this.descriptionLabel.Text = "";
             // 
@@ -458,7 +458,7 @@
             this.priceEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.priceEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.priceEditTextbox.Hint = "Price";
-            this.priceEditTextbox.Location = new System.Drawing.Point(18, 222);
+            this.priceEditTextbox.Location = new System.Drawing.Point(18, 213);
             this.priceEditTextbox.MaxLength = 50;
             this.priceEditTextbox.MouseState = MaterialSkin.MouseState.OUT;
             this.priceEditTextbox.Multiline = false;
@@ -487,6 +487,7 @@
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = false;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // deleteProductButton
             // 
@@ -508,6 +509,7 @@
             this.deleteProductButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.deleteProductButton.UseAccentColor = false;
             this.deleteProductButton.UseVisualStyleBackColor = false;
+            this.deleteProductButton.Click += new System.EventHandler(this.deleteProductButton_Click);
             // 
             // categoryEditListBox
             // 
@@ -571,10 +573,10 @@
             this.descriptionEditTextbox.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.descriptionEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionEditTextbox.Hint = "";
-            this.descriptionEditTextbox.Location = new System.Drawing.Point(18, 278);
+            this.descriptionEditTextbox.Location = new System.Drawing.Point(18, 269);
             this.descriptionEditTextbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.descriptionEditTextbox.Name = "descriptionEditTextbox";
-            this.descriptionEditTextbox.Size = new System.Drawing.Size(458, 72);
+            this.descriptionEditTextbox.Size = new System.Drawing.Size(458, 81);
             this.descriptionEditTextbox.TabIndex = 4;
             this.descriptionEditTextbox.Text = "";
             // 

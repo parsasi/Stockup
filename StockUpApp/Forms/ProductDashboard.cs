@@ -87,6 +87,7 @@ namespace StockUp.Forms
             inStockLabel.Text = this.SelectedProduct.Quantity.ToString();
             categoryLabel.Text = this.SelectedProduct.Category.Title;
             descriptionLabel.Text = this.SelectedProduct.Description;
+            priceLabel.Text = this.SelectedProduct.Price.ToString();
         }
         private void UpdateEditDetails()
         {
@@ -94,6 +95,22 @@ namespace StockUp.Forms
             manufacturerEditTextbox.Text = this.SelectedProduct.Manufacturer;
             quantityEditTextbox.Text = this.SelectedProduct.Quantity.ToString();
             descriptionEditTextbox.Text = this.SelectedProduct.Description;
+            priceEditTextbox.Text = this.SelectedProduct.Price.ToString();
+            categoryEditListBox.SelectedIndex = this.GetCategoryIndex(this.SelectedProduct.Category);
+        }
+
+        private int GetCategoryIndex(Category category)
+        {
+            var allCategories = categoryEditListBox.Items;
+
+            for(int i = 0; i <= allCategories.Count; i++)
+            {
+                if(allCategories[i].Equals(category))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         private void FillCategoryEditListbox()
@@ -101,6 +118,49 @@ namespace StockUp.Forms
             var categoeies = this.DbContext.Categories.ToList();
             categoryEditListBox.DataSource = categoeies;
             categoryEditListBox.DisplayMember = "Title";
+        }
+
+        private void deleteProductButton_Click(object sender, EventArgs e)
+        {
+            if(this.SelectedProduct != null)
+            {
+                this.DeleteProduct(this.SelectedProduct);
+                this.SelectedProduct = null;
+            }
+        }
+
+        private async void DeleteProduct(Product product)
+        {
+            this.DbContext.Remove(product);
+            await this.DbContext.SaveChangesAsync();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            var productName = titleEditTextbox.Text;
+            var manufacturer = manufacturerEditTextbox.Text;
+            Category category = (Category)categoryEditListBox.SelectedItem;
+            double price = double.Parse(priceEditTextbox.Text);
+            var description = descriptionEditTextbox.Text;
+            int quantity = int.Parse(quantityEditTextbox.Text);
+
+            EditProduct(productName, manufacturer, category, price, description, quantity);
+
+        }
+
+        private async void EditProduct(string productName, string manufacturer, Category category, double price, string description = "", int quantity = 0)
+        {
+            if(this.SelectedProduct != null)
+            {
+                var product = this.GetProduct(this.SelectedProduct.UPC);
+                product.Title = productName;
+                product.Manufacturer = manufacturer;
+                product.Category = category;
+                product.Price = price;
+                product.Description = description;
+                product.Quantity = quantity;
+                await this.DbContext.SaveChangesAsync();
+            }
         }
     }
 }
