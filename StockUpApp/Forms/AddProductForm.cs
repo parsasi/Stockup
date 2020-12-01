@@ -61,10 +61,11 @@ namespace StockUp.Forms
             Category category = (Category)categoryListBox.SelectedItem;
             var description = descriptionTextbox.Text;
             int quantity = int.Parse(quantityAddTextbox.Text);
-            addProduct(title, manufacturer, category, description, quantity);
+            double price = double.Parse(priceTextbox.Text);
+            addProduct(title, manufacturer, category, price , description, quantity);
         }
 
-        public async void addProduct(string productName, string manufacturer, Category category, string description = "", int quantity = 0)
+        public async void addProduct(string productName, string manufacturer, Category category, double price , string description = "", int quantity = 0)
         {
             var newProduct = new Product();
             newProduct.Title = productName;
@@ -74,6 +75,7 @@ namespace StockUp.Forms
             newProduct.Category = category;
             newProduct.UPC = System.Guid.NewGuid().ToString();
             newProduct.LastRecieved = DateTime.Now;
+            newProduct.Price = price;
             this.DbContext.Products.Add(newProduct);
             await this.DbContext.SaveChangesAsync();
             FormNavigator.CloseForm("addProductForm");

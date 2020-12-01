@@ -38,6 +38,7 @@
             this.saveProductButton = new MaterialSkin.Controls.MaterialButton();
             this.cancelButton = new MaterialSkin.Controls.MaterialButton();
             this.categoryListBox = new System.Windows.Forms.ListBox();
+            this.priceTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
             // quantityEditSubButton
@@ -92,10 +93,10 @@
             this.descriptionTextbox.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.descriptionTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionTextbox.Hint = "Description...";
-            this.descriptionTextbox.Location = new System.Drawing.Point(45, 338);
+            this.descriptionTextbox.Location = new System.Drawing.Point(45, 383);
             this.descriptionTextbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.descriptionTextbox.Name = "descriptionTextbox";
-            this.descriptionTextbox.Size = new System.Drawing.Size(458, 119);
+            this.descriptionTextbox.Size = new System.Drawing.Size(458, 89);
             this.descriptionTextbox.TabIndex = 4;
             this.descriptionTextbox.Text = "";
             // 
@@ -206,11 +207,29 @@
             this.categoryListBox.Size = new System.Drawing.Size(458, 72);
             this.categoryListBox.TabIndex = 7;
             // 
+            // priceTextbox
+            // 
+            this.priceTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.priceTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.priceTextbox.Depth = 0;
+            this.priceTextbox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.priceTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.priceTextbox.Hint = "Price";
+            this.priceTextbox.Location = new System.Drawing.Point(45, 317);
+            this.priceTextbox.MaxLength = 50;
+            this.priceTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.priceTextbox.Multiline = false;
+            this.priceTextbox.Name = "priceTextbox";
+            this.priceTextbox.Size = new System.Drawing.Size(458, 50);
+            this.priceTextbox.TabIndex = 10;
+            this.priceTextbox.Text = "";
+            // 
             // addProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 662);
+            this.Controls.Add(this.priceTextbox);
             this.Controls.Add(this.saveProductButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.categoryListBox);
@@ -240,5 +259,6 @@
         private MaterialSkin.Controls.MaterialButton saveProductButton;
         private MaterialSkin.Controls.MaterialButton cancelButton;
         private System.Windows.Forms.ListBox categoryListBox;
+        private MaterialSkin.Controls.MaterialTextBox priceTextbox;
     }
 }
