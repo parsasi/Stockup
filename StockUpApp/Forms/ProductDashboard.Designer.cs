@@ -172,6 +172,7 @@
             this.filterButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.filterButton.UseAccentColor = false;
             this.filterButton.UseVisualStyleBackColor = false;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
             // productSearchTextbox
             // 

@@ -25,9 +25,19 @@ namespace StockUp.Forms
 
         private void ProductDashboard_Load(object sender, EventArgs e)
         {
-            var products = this.ListProducts();
-            productsDGV.DataSource = products;
+            FillProductsDGV();
             this.FillCategoryEditListbox();
+        }
+
+        private void FillProductsDGV(List<ProductViewModel> products)
+        {
+            productsDGV.DataSource = products;
+        }
+
+        private void FillProductsDGV()
+        {
+            var products = this.ListProducts();
+            FillProductsDGV(products);
         }
 
         private void dashboardButton_Click(object sender, EventArgs e)
@@ -66,6 +76,13 @@ namespace StockUp.Forms
         {
             var allProducts = this.DbContext.Products.Include("Category").ToList();
             List<ProductViewModel> allProductsView = allProducts.Select(item => new ProductViewModel(item)).ToList();
+            return allProductsView;
+        }
+
+        private List<ProductViewModel> ListProducts(string SearchTerm)
+        {
+            var allProducts = this.DbContext.Products.Include("Category").ToList();
+            List<ProductViewModel> allProductsView = allProducts.Select(item => new ProductViewModel(item)).Where(item => item.Title.Contains(SearchTerm)).ToList();
             return allProductsView;
         }
 
@@ -161,6 +178,24 @@ namespace StockUp.Forms
                 product.Quantity = quantity;
                 await this.DbContext.SaveChangesAsync();
             }
+        }
+
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+            string searchTerm = productSearchTextbox.Text;
+
+            List<ProductViewModel> productList;
+
+            if(searchTerm != "" && searchTerm != null)
+            {
+                productList = this.ListProducts(searchTerm);
+                FillProductsDGV(productList);
+            }
+            else
+            {
+                productList  = this.ListProducts();
+            }
+            FillProductsDGV(productList);
         }
     }
 }
