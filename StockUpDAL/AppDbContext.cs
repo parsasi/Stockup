@@ -23,7 +23,7 @@ namespace StockUpDAL
             // var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\PARSA\DOCUMENTS\STOCKUP\STOCKUP\STOCKUPDAL\STOCKUPDB.MDF;Integrated Security=True;Connect Timeout=30";
             // optionsBuilder.UseSqlServer(connectionString);
 
-            // var connectionString = "Server=localhost,1433; Network Library=DBMSSOCN; Initial Catalog=retail; User=sa; Password=Stockuproot123";
+            // var connectionString = "Server=localhost,1433; Network Library=dbmssocn; Database=retail; User ID=sa; Password=Stockuproot123";
             // optionsBuilder.UseSqlServer(connectionString);
         }
     }
