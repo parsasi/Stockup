@@ -350,7 +350,7 @@
             this.descriptionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.descriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionLabel.Depth = 0;
-            this.descriptionLabel.Font = new System.Drawing.Font("Roboto", 10.8F);
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionLabel.Hint = "";
             this.descriptionLabel.Location = new System.Drawing.Point(21, 269);
@@ -571,7 +571,7 @@
             this.descriptionEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.descriptionEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionEditTextbox.Depth = 0;
-            this.descriptionEditTextbox.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.descriptionEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.descriptionEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionEditTextbox.Hint = "";
             this.descriptionEditTextbox.Location = new System.Drawing.Point(18, 269);
@@ -603,7 +603,7 @@
             this.quantityEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.quantityEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.quantityEditTextbox.Depth = 0;
-            this.quantityEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.quantityEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.quantityEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.quantityEditTextbox.Hint = "Quantity...";
             this.quantityEditTextbox.Location = new System.Drawing.Point(85, 141);
