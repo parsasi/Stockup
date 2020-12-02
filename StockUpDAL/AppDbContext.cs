@@ -16,9 +16,9 @@ namespace StockUpDAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            DotNetEnv.Env.Load();
+            DotNetEnv.Env.Load("../.env");
             string connectionStringEnv = DotNetEnv.Env.GetString("CONNECTION_STRING");
-            Console.WriteLine(connectionStringEnv);
+            System.Diagnostics.Debug.WriteLine(connectionStringEnv);
 
             // var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\parsa\OneDrive\Documents\StockUpDB.mdf;Integrated Security=True;Connect Timeout=30";
             // optionsBuilder.UseSqlServer(connectionString);
