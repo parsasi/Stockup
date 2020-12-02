@@ -16,9 +16,9 @@ namespace StockUpDAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            DotNetEnv.Env.Load("../.env");
-            string connectionStringEnv = DotNetEnv.Env.GetString("CONNECTION_STRING");
-            System.Diagnostics.Debug.WriteLine(connectionStringEnv);
+            // DotNetEnv.Env.Load();
+            // string connectionStringEnv = DotNetEnv.Env.GetString("CONNECTION_STRING", "Not Found");
+            // System.Diagnostics.Debug.WriteLine(connectionStringEnv);
 
             // var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\PARSA\DOCUMENTS\STOCKUP\STOCKUP\STOCKUPDAL\STOCKUPDB.MDF;Integrated Security=True;Connect Timeout=30";
             // optionsBuilder.UseSqlServer(connectionString);
