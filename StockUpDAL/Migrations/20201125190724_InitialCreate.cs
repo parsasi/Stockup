@@ -27,11 +27,11 @@ namespace StockUpDAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: false),
                     LastName = table.Column<string>(nullable: false),
-                    Phone = table.Column<string>(nullable: false),
+                    Phone = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    DOB = table.Column<DateTime>(nullable: false)
+                    DOB = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
