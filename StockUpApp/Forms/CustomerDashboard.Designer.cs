@@ -103,7 +103,6 @@ namespace StockUp.Forms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1416, 917);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // productBrowseLabel
             // 
@@ -179,6 +178,7 @@ namespace StockUp.Forms
             this.filterButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.filterButton.UseAccentColor = false;
             this.filterButton.UseVisualStyleBackColor = false;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
             // productSearchTextbox
             // 
@@ -498,7 +498,7 @@ namespace StockUp.Forms
             this.manufacturerEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.manufacturerEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.manufacturerEditTextbox.Depth = 0;
-            this.manufacturerEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.manufacturerEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.manufacturerEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.manufacturerEditTextbox.Hint = "Manufacturer...";
             this.manufacturerEditTextbox.Location = new System.Drawing.Point(18, 79);
@@ -515,7 +515,7 @@ namespace StockUp.Forms
             this.quantityEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.quantityEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.quantityEditTextbox.Depth = 0;
-            this.quantityEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.quantityEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.quantityEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.quantityEditTextbox.Hint = "Quantity...";
             this.quantityEditTextbox.Location = new System.Drawing.Point(85, 141);
@@ -532,7 +532,7 @@ namespace StockUp.Forms
             this.titleEditTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.titleEditTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.titleEditTextbox.Depth = 0;
-            this.titleEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.titleEditTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.titleEditTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.titleEditTextbox.Hint = "Product Name...";
             this.titleEditTextbox.Location = new System.Drawing.Point(18, 19);
@@ -592,6 +592,7 @@ namespace StockUp.Forms
             this.customersDGV.RowTemplate.Height = 24;
             this.customersDGV.Size = new System.Drawing.Size(832, 723);
             this.customersDGV.TabIndex = 6;
+            this.customersDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customersDGV_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

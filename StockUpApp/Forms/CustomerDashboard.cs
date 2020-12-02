@@ -24,10 +24,6 @@ namespace StockUp.Forms
             this.InitDB();
         }
 
-        private void CustomerDashboard_Load(object sender, EventArgs e)
-        {
-            FillCustomersDGV();
-        }
 
         private void FillCustomersDGV(List<CustomerViewModel> customers)
         {
@@ -50,46 +46,23 @@ namespace StockUp.Forms
             FormNavigator.OpenForm("addCustomerForm");
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                //Gets the row number of the selected cell
-                var row = customersDGV.CurrentCell.RowIndex;
-                //Gets the value of the first cell, for that row number
-                //This value will be the UPC of the prodcut 
-                int Id = int.Parse(customersDGV.Rows[row].Cells[0].Value.ToString());
-
-                //Updates the selected product of the form using the UPC
-                this.UpdateSelectedCustomer(Id);
-                //Updates the details and textbox values shown on the right side of the form
-                this.UpdateDetails();
-                this.UpdateEditDetails();
-            }
-            catch
-            {
-                //Silently Fail 
-            }
-
-        }
-
         private List<CustomerViewModel> ListCustomers()
         {
-            var allCustomers = this.DbContext.Customers.Include("LastName").ToList();
+            var allCustomers = this.DbContext.Customers.ToList();
             List<CustomerViewModel> allCustomersView = allCustomers.Select(item => new CustomerViewModel(item)).ToList();
             return allCustomersView;
         }
 
         private List<CustomerViewModel> ListCustomers(string SearchTerm)
         {
-            var allCustomers = this.DbContext.Customers.Include("LastName").ToList();
+            var allCustomers = this.DbContext.Customers.ToList();
             List<CustomerViewModel> allCustomersView = allCustomers.Select(item => new CustomerViewModel(item)).Where(item => item.FirstName.Contains(SearchTerm)).ToList();
             return allCustomersView;
         }
 
         private Customer GetCustomer(int Id)
         {
-            var customer = this.DbContext.Customers.Include("LastName").Where(item => item.Id == Id).SingleOrDefault();
+            var customer = this.DbContext.Customers.Where(item => item.Id == Id).SingleOrDefault();
             return customer;
         }
         private void UpdateSelectedCustomer(int Id)
@@ -147,15 +120,26 @@ namespace StockUp.Forms
             FillCustomersDGV(customerList);
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void CustomerDashboardForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'customerDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.customerDataSet.Customers);
+            FillCustomersDGV();
+        }
+
+        private void customersDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+                //Gets the row number of the selected cell
+                var row = customersDGV.CurrentCell.RowIndex;
+                //Gets the value of the first cell, for that row number
+                //This value will be the UPC of the prodcut 
+                int Id = int.Parse(customersDGV.Rows[row].Cells[0].Value.ToString());
+
+                //Updates the selected product of the form using the UPC
+                this.UpdateSelectedCustomer(Id);
+                //Updates the details and textbox values shown on the right side of the form
+                this.UpdateDetails();
+                this.UpdateEditDetails();
+            
         }
     }
 }

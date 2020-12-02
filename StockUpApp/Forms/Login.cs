@@ -19,7 +19,12 @@ namespace StockUp.Forms
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            FormNavigator.SwitchForm("DashboardForm");
+            var username = usernameTexbox.Text;
+            var password = passwordTextbox.Text;
+            if(username == "admin" && password == "admin")
+            {
+                FormNavigator.SwitchForm("DashboardForm");
+            }
         }
     }
 }
